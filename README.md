@@ -1,6 +1,6 @@
 # human_time
 
-Ruby time and date comparisons for humans. Have you ever struggled to understand what a piece of code like this is trying to say?
+Have you ever struggled to understand what a piece of code like this is trying to say?
 
 ```ruby
 some_time > another_time
@@ -91,7 +91,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/human_time. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/allenan/human_time. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License

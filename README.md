@@ -104,9 +104,11 @@ newer_date = Date.parse('2016-01-02')
 
 expect(newer_date).to be_more_recent_than(older_date)
 expect(newer_date).to be_newer_than(older_date)
+expect(newer_date).to be_after(older_date)
 expect(newer_date).to be_more_recent_than_or_equal_to(older_date)
 expect(newer_date).to be_newer_than_or_equal_to(newer_date)
 expect(older_date).to be_older_than(newer_date)
+expect(older_date).to be_before(newer_date)
 expect(older_date).to be_older_than_or_equal_to(older_date)
 ```
 

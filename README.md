@@ -1,5 +1,6 @@
 # human_time
 
+[![Build Status](https://travis-ci.org/allenan/human_time.svg?branch=master)](https://travis-ci.org/allenan/human_time)
 [![Gem Version](https://badge.fury.io/rb/human_time.svg)](https://badge.fury.io/rb/human_time)
 
 Have you ever struggled to understand what a piece of code like this is trying to say?

@@ -1,6 +1,28 @@
 # human_time
 
-Ruby time and date comparisons for humans.
+Ruby time and date comparisons for humans. Have you ever struggled to understand what a piece of code like this is trying to say?
+
+```ruby
+some_time > another_time
+```
+
+It should be simple, but our brains don't think in terms of "greater than" or "less than" when it comes to times and dates.
+
+human_time lets you express time comparison the way your human brain thinks:
+
+```ruby
+some_time.more_recent_than?(another_time)
+```
+
+It also includes some synonyms so you can word it in a way that makes sense to your human brain:
+
+```ruby
+some_time.newer_than?(another_time)
+some_time.comes_after?(another_time)
+```
+
+For a complete list of expressions, see the 'Usage' section below.
+
 
 ## Installation
 
@@ -20,7 +42,46 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+human_time simply adds aliases for the `>`, `>=`, `<` and `<=` methods on the `Date`, `Time` and `DateTime` classes.
+
+```ruby
+older_date = Date.parse('2016-01-01')
+newer_date = Date.parse('2016-01-02')
+
+older_date < newer_date
+# => true
+
+older_date.older_than?(newer_date)
+# => true
+
+newer_date > older_date
+# => true
+
+newer_date.newer_than?(older_date)
+# => true
+```
+
+### `>` aliases
+
+- `newer_than?`
+- `more_recent_than?`
+- `comes_after?`
+
+### `>=` aliases
+
+- `newer_than_or_equal_to?`
+- `more_recent_than_or_equal_to?`
+- `after_or_equal_to?`
+
+### `<` aliases
+
+- `older_than?`
+- `comes_before?`
+
+### `<=` aliases
+
+- `older_than_or_equal_to?`
+- `before_or_equal_to?`
 
 ## Development
 

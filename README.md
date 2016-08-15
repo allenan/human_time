@@ -86,6 +86,30 @@ newer_date.newer_than?(older_date)
 - `older_than_or_equal_to?`
 - `before_or_equal_to?`
 
+## RSpec Matchers
+
+human_time also provides RSpec matchers for more understandable time comparisons in your tests.
+
+To use these, include the following in your `spec_helper.rb` file:
+
+```ruby
+require 'human_time/rspec_matchers'
+```
+
+And then you can use the following matchers:
+
+```ruby
+older_date = Date.parse('2016-01-01')
+newer_date = Date.parse('2016-01-02')
+
+expect(newer_date).to be_more_recent_than(older_date)
+expect(newer_date).to be_newer_than(older_date)
+expect(newer_date).to be_more_recent_than_or_equal_to(older_date)
+expect(newer_date).to be_newer_than_or_equal_to(newer_date)
+expect(older_date).to be_older_than(newer_date)
+expect(older_date).to be_older_than_or_equal_to(older_date)
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.

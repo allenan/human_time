@@ -5,19 +5,19 @@ require "human_time/version"
 
 module HumanTime
   def self.greater_than_aliases
-    %w{newer_than? more_recent_than? comes_after?}
+    %w{newer_than? more_recent_than? comes_after? later_than?}
   end
 
   def self.greater_than_or_equal_to_aliases
-    %w{newer_than_or_equal_to? more_recent_than_or_equal_to? after_or_equal_to?}
+    %w{newer_than_or_equal_to? more_recent_than_or_equal_to? after_or_equal_to? later_than_or_equal_to?}
   end
 
   def self.less_than_aliases
-    %w{older_than? comes_before?}
+    %w{older_than? comes_before? earlier_than?}
   end
 
   def self.less_than_or_equal_to_aliases
-    %w{older_than_or_equal_to? before_or_equal_to?}
+    %w{older_than_or_equal_to? before_or_equal_to? earlier_than_or_equal_to?}
   end
 end
 

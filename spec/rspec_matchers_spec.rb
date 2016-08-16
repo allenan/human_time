@@ -18,12 +18,20 @@ describe 'human_time rspec matchers' do
     expect(newer_date).to be_after(older_date)
   end
 
+  it 'implements be_later_than' do
+    expect(newer_date).to be_later_than(older_date)
+  end
+
   it 'implements be_more_recent_than_or_equal_to' do
     expect(newer_date).to be_more_recent_than_or_equal_to(older_date)
   end
 
   it 'implements be_newer_than_or_equal_to' do
     expect(newer_date).to be_newer_than_or_equal_to(newer_date)
+  end
+
+  it 'implements be_later_than_or_equal_to' do
+    expect(newer_date).to be_later_than_or_equal_to(newer_date)
   end
 
   it 'implements be_older_than' do
@@ -34,7 +42,15 @@ describe 'human_time rspec matchers' do
     expect(older_date).to be_before(newer_date)
   end
 
+  it 'implements be_earlier_than' do
+    expect(older_date).to be_earlier_than(newer_date)
+  end
+
   it 'implements be_older_than_or_equal_to' do
     expect(older_date).to be_older_than_or_equal_to(older_date)
+  end
+
+  it 'implements be_earlier_than_or_equal_to' do
+    expect(older_date).to be_earlier_than_or_equal_to(older_date)
   end
 end

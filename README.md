@@ -69,22 +69,26 @@ newer_date.newer_than?(older_date)
 - `newer_than?`
 - `more_recent_than?`
 - `comes_after?`
+- `later_than?`
 
 ### `>=` aliases
 
 - `newer_than_or_equal_to?`
 - `more_recent_than_or_equal_to?`
 - `after_or_equal_to?`
+- `later_than_or_equal_to?`
 
 ### `<` aliases
 
 - `older_than?`
 - `comes_before?`
+- `earlier_than?`
 
 ### `<=` aliases
 
 - `older_than_or_equal_to?`
 - `before_or_equal_to?`
+- `earlier_than_or_equal_to?`
 
 ## RSpec Matchers
 
@@ -105,11 +109,15 @@ newer_date = Date.parse('2016-01-02')
 expect(newer_date).to be_more_recent_than(older_date)
 expect(newer_date).to be_newer_than(older_date)
 expect(newer_date).to be_after(older_date)
+expect(newer_date).to be_later_than(older_date)
 expect(newer_date).to be_more_recent_than_or_equal_to(older_date)
 expect(newer_date).to be_newer_than_or_equal_to(newer_date)
+expect(newer_date).to be_later_than_or_equal_to(newer_date)
 expect(older_date).to be_older_than(newer_date)
 expect(older_date).to be_before(newer_date)
+expect(older_date).to be_earlier_than(newer_date)
 expect(older_date).to be_older_than_or_equal_to(older_date)
+expect(older_date).to be_earlier_than_or_equal_to(older_date)
 ```
 
 ## Development
